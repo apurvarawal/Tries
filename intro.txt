@@ -1,0 +1,28 @@
+List of strings 
+"no","not","news","hello","apple"
+
+QUERIES:
+-not ---> true(present)
+-new ---> false(not present)
+
+METHODS TO FIND QUERIES:
+-brute force - O(n*m)   [n is the no. of strings and m is length of the query]
+-hashing 
+-prefix tree
+
+              
+
+              |--> e --> w --> s        [s is the terminal node for "news"]
+              |
+              |--> o --> t              [o is the terminal node for "no" and t is the terminal node for "not"]
+     |--> n --|
+\0 --|
+     |--> a --> p --> p --> l --> e     [e is the terminal node for "apple"]
+     |
+     |--> h --> e --> l --> l --> o     [o is the terminal node for "hello"]
+
+TIME COMPLEXITY TO SEARCH ANY WORD 
+O(string length), because we need to traverse on the same no. of nodes 
+
+If data is huge, tries are used. If data is small hashmaps are used since, huge data leads to 
+collision in hashmaps.
